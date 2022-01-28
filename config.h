@@ -2,12 +2,12 @@
 
 /* appearance */
 static const char font[]        = "MesloLGS NF:size=12";
-static const char* normbgcolor  = "#222222";
-static const char* normfgcolor  = "#cccccc";
-static const char* selbgcolor   = "#555555";
-static const char* selfgcolor   = "#ffffff";
-static const char* urgbgcolor   = "#111111";
-static const char* urgfgcolor   = "#cc0000";
+static const char* normbgcolor  = "#3c3836";
+static const char* normfgcolor  = "#ebdbb2";
+static const char* selbgcolor   = "#504945";
+static const char* selfgcolor   = "#ebdbb2";
+static const char* urgbgcolor   = "#fb4934";
+static const char* urgfgcolor   = "#ebdbb2";
 static const char before[]      = "<";
 static const char after[]       = ">";
 static const char titletrim[]   = "...";
@@ -38,13 +38,11 @@ static Key keys[] = {
 	/* modifier             key        function     argument */
 	{ MODKEY|ShiftMask,     XK_Return, focusonce,   { 0 } },
 	{ MODKEY|ShiftMask,     XK_Return, spawn,       { 0 } },
-
-	{ MODKEY|ShiftMask,     XK_Right,      rotate,      { .i = +1 } },
-	{ MODKEY|ShiftMask,     XK_Left,      rotate,      { .i = -1 } },
+	{ MODKEY|ShiftMask,     XK_Right,  rotate,      { .i = +1 } },
+	{ MODKEY|ShiftMask,     XK_Left,   rotate,      { .i = -1 } },
 	{ MODKEY|ShiftMask,     XK_j,      movetab,     { .i = -1 } },
 	{ MODKEY|ShiftMask,     XK_k,      movetab,     { .i = +1 } },
 	{ MODKEY,               XK_Tab,    rotate,      { .i = 0 } },
-
 	{ MODKEY,               XK_grave,  spawn,       SETPROP("_TABBED_SELECT_TAB") },
 	{ MODKEY,               XK_1,      move,        { .i = 0 } },
 	{ MODKEY,               XK_2,      move,        { .i = 1 } },
@@ -56,11 +54,8 @@ static Key keys[] = {
 	{ MODKEY,               XK_8,      move,        { .i = 7 } },
 	{ MODKEY,               XK_9,      move,        { .i = 8 } },
 	{ MODKEY,               XK_0,      move,        { .i = 9 } },
-
-	{ MODKEY,               XK_q,      killclient,  { 0 } },
-
+	{ MODKEY,               XK_w,      killclient,  { 0 } },
 	{ MODKEY,               XK_u,      focusurgent, { 0 } },
 	{ MODKEY|ShiftMask,     XK_u,      toggle,      { .v = (void*) &urgentswitch } },
-
 	{ 0,                    XK_F11,    fullscreen,  { 0 } },
 };
